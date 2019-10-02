@@ -54,10 +54,12 @@ window.onload = () => {
       let formSerializado = $(form).serialize()
       console.log(formSerializado)
 
-      fetch("http://localhost:8080/bookteca-api/src/teste.php").then(function(retorno){
-        return retorno.json()
-      }).then(function(json){
-        alert(json)
+      fetch("http://localhost:8080/bookteca-api/src/inserirlivro.php", {
+        method: "POST",
+        body: formSerializado,
+        headers: new Headers({
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+        })
       })
     }
   })
