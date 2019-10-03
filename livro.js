@@ -53,10 +53,6 @@ window.onload = () => {
       console.log(form)
       let formSerializado = $(form).serialize()
       console.log(formSerializado)
-      JSON.stringify({nome: "ana", idade: 18})
-      //nome=ana&idade=18
-      JSON.parse("nome=ana&idade=18")
-      //{nome: "ana", idade: 18}
 
       fetch("http://localhost:8080/bookteca-api/src/inserirlivro.php", {
         method: "POST",
