@@ -19,20 +19,20 @@
   max-height: 72px;
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .custom-card-header-icon {
   display: block;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: rgba(0,0,0,0.2);
   margin-left: 16px;
 }
 
-.custom-card-header-container {
+.custom-card-title-container {
   display: flex;
   flex-direction: column;
   margin-left: 16px;
@@ -40,6 +40,7 @@
 
 .custom-card-header-title {
   font-size: 20px;
+
 }
 
 .custom-card-header-subtitle {
@@ -53,4 +54,9 @@
   max-height: 194px;
   min-height: 194px;
   background-size: 100%;
+}
+
+.custom-card-content {
+  height: 56px;
+  
 }
