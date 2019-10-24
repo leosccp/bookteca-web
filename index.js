@@ -5,7 +5,7 @@ $(function(){
 
         let listagem = $("#listagem")
         for(let i = 0; i < json.length; i++){
-          let cardAtual = criarCard(json[i].titulo, json[i].subtitulo, json[i].descricao, "https://picsum.photos/200/300")
+          let cardAtual = criarCard(json[i].id, json[i].titulo, json[i].subtitulo, json[i].descricao, "https://picsum.photos/200/300?random=" + i)
           listagem.append(cardAtual)
         }
 
@@ -15,9 +15,13 @@ $(function(){
 
   carregarLivros();
 
-  function criarCard(titulo, subtitulo, descricao, imagem){
+  function criarCard(id, titulo, subtitulo, descricao, imagem){
     let coluna4 = $("<div></div>")
     coluna4.addClass("col-4")
+    coluna4.addClass("md-4")
+    coluna4.on('click', function(){
+    window.location.href="/livro-detalhes?id=" + id
+  })
 
     let card = $("<div></div>")
     card.addClass("custom-card")
